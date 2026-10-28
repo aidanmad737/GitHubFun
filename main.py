@@ -1,5 +1,3 @@
 
-
-
-
 #Main
+print("Hello World")
