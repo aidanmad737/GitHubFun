@@ -1,10 +1,24 @@
 from Player import Player
 from Cards import Deck
 
+'''From Cards i think that it should include 
+init Deck
+shuffle deck
+list of cards
+
+Each card should also provide 
+value comparisons
+
+From Player i think that it should include
+init player
+name
+Actions: draw card, collect cards, check if player has cards
+'''
+
 #Main
 def main():
     print("Welcome to Two-Deck War!")
-
+#I think that somoene also should create an init function to create the Deck
     deck1 = Deck()
     deck2 = Deck()
  #shuffle the decks to randomize the order of the cards
