@@ -60,8 +60,8 @@ def main():
             player2.collect_cards(cards_played)
         #For above^^ I'm not sure how you guys want to determine card value, I googled this .value cmd.
         #feel free to change it to whatever you guys want. I just think the card values should be compared
-        print(player1)
-        print(player2)
+        print(f"Cards in {player1.name}'s deck: {len(player1.cards)}")
+        print(f"Cards in {player2.name}'s deck: {len(player2.cards)}")
         input("Press Enter to play the next round.")
 
     if player1.has_cards():
