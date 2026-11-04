@@ -1,8 +1,9 @@
 import random
+from deck import Deck
 
 #Card Class
 class Card:
-#Creates a card
+#Creates card attributes
     def __init__(self, suit, rank, value):
         self.suit = suit
         self.rank = rank
