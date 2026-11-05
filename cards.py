@@ -1,6 +1,3 @@
-import random
-from deck import Deck
-
 #Card Class
 class Card:
 #Creates card attributes

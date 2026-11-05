@@ -1,5 +1,6 @@
-from Player import Player
-from Cards import Deck
+import random
+from player import Player
+from deck import Deck
 
 '''From Cards i think that it should include 
 init Deck
@@ -42,6 +43,13 @@ def main():
         while card1.value == card2.value:
             print("War!")
 
+            if not player1.has_cards():
+                print(f"{player1.name} ran out of cards for war!")
+                break
+            if not player2.has_cards():
+                print(f"{player2.name} ran out of cards for war!")
+                break
+
             card1 = player1.draw_card()
             card2 = player2.draw_card()
 
@@ -52,7 +60,8 @@ def main():
             cards_played.append(card2)
         #I'm thinking that collect_cards can be used to add the cards played in the round to the winner's deck. 
         #This way, the winner of the round will have more cards to play in future rounds.
-        if card1.value > card2.value:
+        random.shuffle(cards_played)
+        if card1.value > card2.value or not player2.has_cards():
             print(f"{player1.name} wins the round!")
             player1.collect_cards(cards_played)
         else:
